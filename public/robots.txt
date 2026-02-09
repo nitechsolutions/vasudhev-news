@@ -1,17 +1,15 @@
 User-agent: *
-Disallow: /includes/
 Disallow: /login
 Disallow: /register
-Disallow: /dashboard
-Disallow: /dashboard/writer
-Disallow: /dashboard/writer/create
-Disallow: /dashboard/writer/edit
-Disallow: /dashboard/admin
-Disallow: /dashboard/horoscope
-Disallow: /dashboard/post
-Disallow: /dashboard/user
+Disallow: /dashboard/
+Disallow: /dashboard/admin/
+Disallow: /dashboard/writer/
+Disallow: /dashboard/post/
+Disallow: /dashboard/user/
+Disallow: /dashboard/horoscope/
 
-User-agent: Googlebot
-Allow: /includes/
+Allow: /
 
 Sitemap: https://vasudhev.com/sitemap.xml
+Sitemap: https://vasudhev.com/news-sitemap.xml
+
