@@ -1,10 +1,16 @@
 import { MetadataRoute } from "next";
+import { connectDB } from "@/lib/db";
+import Post from "@/models/Post";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const res = await fetch("https://vasudhev.com/api/posts/public");
-  const posts = await res.json();
+  await connectDB();
 
-  const postUrls = posts.map((post: any) => ({
+  const posts = await Post.find(
+    { },
+    { slug: 1, updatedAt: 1 }
+  ).lean();
+
+  const postUrls = posts.map((post) => ({
     url: `https://vasudhev.com/${post.slug}`,
     lastModified: post.updatedAt || new Date(),
     changeFrequency: "daily",
