@@ -1,6 +1,5 @@
 "use client";
 
-import { Metadata } from "next";
 import Link from "next/link";
 import { useEffect, useState, ReactNode } from "react";
 
@@ -12,14 +11,6 @@ interface AuthUser {
   role: UserRole;
 }
 
-export const metadata: Metadata = {
-  title: "Login",
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-  },
-};
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null);
