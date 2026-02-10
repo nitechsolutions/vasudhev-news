@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   keywords:
     "Vasudhev Hindi News, हिंदी न्यूज़, आज की खबरें, भारत समाचार, देश, दुनिया, बिज़नेस, टेक्नोलॉजी, हेल्थ, लाइफस्टाइल, दिल्ली, मुंबई, पुणे और राशिफल की ताज़ा खबरें।",
   metadataBase: new URL("https://vasudhev.com"),
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

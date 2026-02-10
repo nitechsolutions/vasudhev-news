@@ -11,6 +11,7 @@ interface AuthUser {
   role: UserRole;
 }
 
+
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null);
   const [loading, setLoading] = useState(true);
