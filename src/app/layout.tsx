@@ -7,6 +7,7 @@ import Topbar from "@/components/Topbar";
 import Navbar from "@/components/Navbar";
 import { Providers } from "./providers";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vasudhev | हिंदी न्यूज़, ताज़ा खबरें, ब्रेकिंग न्यूज़, Breaking News, Latest News, Top Headlines",
+  title:
+    "Vasudhev | हिंदी न्यूज़, ताज़ा खबरें, ब्रेकिंग न्यूज़, Breaking News, Latest News, Top Headlines",
   description:
     "Vasudhev पर पढ़ें भारत, दुनिया, राजनीति, टेक्नोलॉजी और बिज़नेस, हेल्थ, लाइफस्टाइल, दिल्ली, मुंबई, पुणे और राशिफल की ताज़ा खबरें।",
   keywords:
@@ -53,6 +55,7 @@ export default function RootLayout({
             </div>
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
